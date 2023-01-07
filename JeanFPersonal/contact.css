@@ -1,0 +1,163 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    
+}
+body{
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(grey, black, green);
+}
+nav{
+    background: darkgreen;
+    height: 80px;
+    width: 100%;
+    padding: auto;
+}
+#corpo{
+    background-size: 100%;
+    min-height:400px;
+    padding: 100px 0 0 0;
+}
+.logo{
+    float: left;
+    border-radius: 100%;
+    width: 60px;
+    padding: 0 5px;
+    line-height: 80px;
+    position: fixed left top;
+}
+
+
+#menu{
+    margin-right: 20px;
+    float: right;
+}
+#menu a {
+    padding: 15px 30px;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    transition: 0.7s ease;
+    display: inline-block;
+    line-height: 30px;
+    margin: 5px 5px;
+    text-transform: uppercase;
+}   
+
+#menu a:hover{
+    background-color: black;
+    color: white;
+    transition: .5s;
+}
+.checkbtn { 
+    font-size: 30px;
+    color: black;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media(max-width: 858px){
+    .checkbtn {
+        display: block;
+    }
+    #menu{
+        position: fixed;
+        background: linear-gradient(darkgreen , black);
+        top: 80px;
+        left: -100%;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    #menu a{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    #menu a{
+        font-size: 30px;
+    }
+    #menu a:hover{
+        background: black;
+        color: white;
+    }
+    #check:checked ~ #menu{
+       left: 0;
+    }
+    #check:checked ~ #corpo {
+        visibility: hidden;
+    }
+    
+}
+footer{
+    clear: both;
+    background-color: black;
+    height: 80px;
+    -webkit-text-stroke: 1px white;
+    text-align: center;
+    padding: 10px;
+}
+h1,h2, h3, p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;   
+}
+
+
+ul{
+  position: relative;
+   align-items: center;  
+   display: inline-block;
+}
+ul li{
+    position: relative;
+    list-style: none;
+    margin: 0 60px 60px;
+    cursor: pointer;
+    
+}
+ul li a{
+    text-decoration: none;
+}
+ul li a .fa-brands{
+    font-size: 8em;
+    color:rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+}
+ul li a::before{
+    font-family: "FontAwesome";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 8rem;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+ul li:nth-child(1) a::before{
+    content: "\f16d";
+    background-image:linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%,#cc2360 75%,#bc1888 100% );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 4px solid #dc2743;
+}
+ul li:nth-child(2) a::before{
+    content: "\f232";
+    color: green;
+    border-bottom: 4px solid green;
+}
+ul li:hover a::before{
+    height: 100%;
+    filter: drop-shadow(0 0 7px green)
+}
+
+
